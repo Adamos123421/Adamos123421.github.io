@@ -117,7 +117,7 @@ const Hero = () => {
               lineHeight: 1.6,
             }}
           >
-            Spécialisé en Intelligence Artificielle, Machine Learning et Développement Full-Stack.
+            Spécialisé en Intelligence Artificielle, Machine Learning, Développement Full-Stack, Cybersécurité et VoIP.
             Passionné par l'innovation technologique et la résolution de problèmes complexes.
           </motion.p>
 
