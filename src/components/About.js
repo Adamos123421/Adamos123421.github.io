@@ -96,7 +96,7 @@ const About = () => {
                 Spécialisations
               </h4>
               <div style={{ display: 'grid', gap: '0.5rem' }}>
-                {['Data and Software Engineering', 'Machine Learning & AI', 'Cybersecurity', 'Cloud Infrastructure', 'Computer Vision'].map((spec, index) => (
+                {['Data and Software Engineering', 'Machine Learning & AI', 'Cybersecurity', 'VoIP & Telecommunications', 'Cloud Infrastructure', 'Computer Vision'].map((spec, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}

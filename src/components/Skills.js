@@ -62,6 +62,17 @@ const Skills = () => {
         { name: 'CI/CD', level: 80 },
         { name: 'DevOps', level: 75 },
       ]
+    },
+    {
+      title: 'Cybersécurité & VoIP',
+      icon: <Settings size={24} />,
+      color: '#ff6b6b',
+      skills: [
+        { name: 'Sécurité réseau', level: 80 },
+        { name: 'VoIP/SIP', level: 85 },
+        { name: 'Cryptographie', level: 75 },
+        { name: 'Asterisk', level: 80 },
+      ]
     }
   ];
 
@@ -73,7 +84,9 @@ const Skills = () => {
     'Apprentissage rapide',
     'Adaptabilité',
     'Pensée analytique',
-    'Innovation'
+    'Innovation',
+    'Sécurité informatique',
+    'Analyse de vulnérabilités'
   ];
 
   return (
