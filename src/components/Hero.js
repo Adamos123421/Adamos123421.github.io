@@ -1,8 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Download, Mail } from 'lucide-react';
 
 const Hero = () => {
+  const [currentText, setCurrentText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  
+  const skills = [
+    'Python & Machine Learning',
+    'React.js & Frontend Development',
+    'Cybersecurity & Network Security',
+    'VoIP & Telecommunications',
+    'SQL & Database Management',
+    'Docker & DevOps',
+    'Git & Version Control',
+    'Cloud Infrastructure (AWS/Azure)',
+    'Computer Vision & AI',
+    'Full-Stack Development'
+  ];
+
+  useEffect(() => {
+    const currentSkill = skills[currentIndex];
+    
+    if (!isDeleting) {
+      if (currentText.length < currentSkill.length) {
+        const timeout = setTimeout(() => {
+          setCurrentText(currentSkill.slice(0, currentText.length + 1));
+        }, 100);
+        return () => clearTimeout(timeout);
+      } else {
+        const timeout = setTimeout(() => {
+          setIsDeleting(true);
+        }, 2000);
+        return () => clearTimeout(timeout);
+      }
+    } else {
+      if (currentText.length > 0) {
+        const timeout = setTimeout(() => {
+          setCurrentText(currentText.slice(0, -1));
+        }, 50);
+        return () => clearTimeout(timeout);
+      } else {
+        setIsDeleting(false);
+        setCurrentIndex((prev) => (prev + 1) % skills.length);
+      }
+    }
+  }, [currentText, currentIndex, isDeleting, skills]);
+
   const scrollToAbout = () => {
     document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
   };
@@ -105,21 +150,62 @@ const Hero = () => {
             Ingénieur en Data & Software Engineering
           </motion.h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            style={{
-              fontSize: '1.1rem',
-              maxWidth: 600,
-              margin: '0 auto 3rem',
-              color: '#8892b0',
-              lineHeight: 1.6,
-            }}
-          >
-            Spécialisé en Intelligence Artificielle, Machine Learning, Développement Full-Stack, Cybersécurité et VoIP.
-            Passionné par l'innovation technologique et la résolution de problèmes complexes.
-          </motion.p>
+                     <motion.p
+             initial={{ opacity: 0, y: 30 }}
+             animate={{ opacity: 1, y: 0 }}
+             transition={{ duration: 0.8, delay: 0.6 }}
+             style={{
+               fontSize: '1.1rem',
+               maxWidth: 600,
+               margin: '0 auto 2rem',
+               color: '#8892b0',
+               lineHeight: 1.6,
+             }}
+           >
+             Spécialisé en Intelligence Artificielle, Machine Learning, Développement Full-Stack, Cybersécurité et VoIP.
+             Passionné par l'innovation technologique et la résolution de problèmes complexes.
+           </motion.p>
+
+           {/* Terminal Effect */}
+           <motion.div
+             initial={{ opacity: 0, y: 30 }}
+             animate={{ opacity: 1, y: 0 }}
+             transition={{ duration: 0.8, delay: 0.7 }}
+             style={{
+               background: 'rgba(0, 0, 0, 0.8)',
+               border: '1px solid rgba(102, 126, 234, 0.3)',
+               borderRadius: '12px',
+               padding: '1.5rem',
+               margin: '0 auto 2rem',
+               maxWidth: 600,
+               fontFamily: 'Consolas, Monaco, "Courier New", monospace',
+               fontSize: '0.9rem',
+               color: '#00ff00',
+               textAlign: 'left',
+               backdropFilter: 'blur(10px)',
+               boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)',
+             }}
+           >
+                           <div style={{ marginBottom: '0.5rem', color: '#667eea' }}>
+                <span style={{ color: '#ff6b6b' }}>$</span> 
+                <span style={{ color: '#ffffff' }}> adam@skills</span>
+                <span style={{ color: '#667eea' }}>:</span>
+                <span style={{ color: '#4facfe' }}>~/expertise</span>
+                <span style={{ color: '#667eea' }}>$</span>
+              </div>
+              <div style={{ color: '#00ff00' }}>
+                <span style={{ color: '#667eea' }}>echo "</span>
+                {currentText}
+                <span style={{ color: '#667eea' }}>"</span>
+                <motion.span
+                  animate={{ opacity: [1, 0, 1] }}
+                  transition={{ duration: 0.8, repeat: Infinity }}
+                  style={{ color: '#00ff00' }}
+                >
+                  |
+                </motion.span>
+              </div>
+           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -155,28 +241,28 @@ const Hero = () => {
               Me Contacter
             </motion.button>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => window.open('/cv-adam-sirri.pdf', '_blank')}
-              style={{
-                background: 'rgba(255, 255, 255, 0.1)',
-                border: '2px solid rgba(102, 126, 234, 0.3)',
-                color: '#ffffff',
-                padding: '1rem 2rem',
-                borderRadius: '50px',
-                fontSize: '1rem',
-                fontWeight: 600,
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                backdropFilter: 'blur(10px)',
-              }}
-            >
-              <Download size={20} />
-              Télécharger CV
-            </motion.button>
+                         <motion.button
+               whileHover={{ scale: 1.05 }}
+               whileTap={{ scale: 0.95 }}
+               onClick={() => window.open('/cv.pdf', '_blank')}
+               style={{
+                 background: 'rgba(255, 255, 255, 0.1)',
+                 border: '2px solid rgba(102, 126, 234, 0.3)',
+                 color: '#ffffff',
+                 padding: '1rem 2rem',
+                 borderRadius: '50px',
+                 fontSize: '1rem',
+                 fontWeight: 600,
+                 cursor: 'pointer',
+                 display: 'flex',
+                 alignItems: 'center',
+                 gap: '0.5rem',
+                 backdropFilter: 'blur(10px)',
+               }}
+             >
+               <Download size={20} />
+               Télécharger CV
+             </motion.button>
           </motion.div>
         </motion.div>
 

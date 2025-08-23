@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ExternalLink, Github, Globe, Shield, Phone, Eye, Bot } from 'lucide-react';
@@ -8,6 +8,28 @@ const Projects = () => {
     threshold: 0.3,
     triggerOnce: true,
   });
+  
+  const [terminalText, setTerminalText] = useState('');
+  const [showTerminal, setShowTerminal] = useState(false);
+
+  useEffect(() => {
+    if (inView) {
+      setShowTerminal(true);
+      const command = '$ find projects/ -name "*.js" -o -name "*.py"';
+      let index = 0;
+      
+      const typeInterval = setInterval(() => {
+        if (index <= command.length) {
+          setTerminalText(command.slice(0, index));
+          index++;
+        } else {
+          clearInterval(typeInterval);
+        }
+      }, 100);
+      
+      return () => clearInterval(typeInterval);
+    }
+  }, [inView]);
 
   const projectsData = [
     {
@@ -113,6 +135,42 @@ const Projects = () => {
             }}
           />
         </motion.div>
+
+        {/* Terminal Hint */}
+        {showTerminal && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            style={{
+              background: 'rgba(0, 0, 0, 0.6)',
+              border: '1px solid rgba(102, 126, 234, 0.2)',
+              borderRadius: '8px',
+              padding: '0.75rem',
+              margin: '0 auto 2rem',
+              maxWidth: 400,
+              fontFamily: 'Consolas, Monaco, "Courier New", monospace',
+              fontSize: '0.8rem',
+              color: '#00ff00',
+              backdropFilter: 'blur(5px)',
+              textAlign: 'center',
+            }}
+          >
+            <div style={{ color: '#00ff00' }}>
+              {terminalText}
+              <motion.span
+                animate={{ opacity: [1, 0, 1] }}
+                transition={{ duration: 0.8, repeat: Infinity }}
+                style={{ color: '#00ff00' }}
+              >
+                |
+              </motion.span>
+            </div>
+            <div style={{ color: '#ffffff', marginTop: '0.5rem' }}>
+              → Found {projectsData.length} projects in portfolio
+            </div>
+          </motion.div>
+        )}
 
         <div style={{ 
           display: 'grid', 

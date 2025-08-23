@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
@@ -8,6 +8,28 @@ const About = () => {
     threshold: 0.3,
     triggerOnce: true,
   });
+  
+  const [terminalText, setTerminalText] = useState('');
+  const [showTerminal, setShowTerminal] = useState(false);
+
+  useEffect(() => {
+    if (inView) {
+      setShowTerminal(true);
+      const command = '$ whoami';
+      let index = 0;
+      
+      const typeInterval = setInterval(() => {
+        if (index <= command.length) {
+          setTerminalText(command.slice(0, index));
+          index++;
+        } else {
+          clearInterval(typeInterval);
+        }
+      }, 100);
+      
+      return () => clearInterval(typeInterval);
+    }
+  }, [inView]);
 
   return (
     <section
@@ -81,10 +103,44 @@ const About = () => {
               fontSize: 'clamp(1rem, 3vw, 1.1rem)',
               color: '#a8b2d1',
               lineHeight: 1.7,
-              marginBottom: '2rem',
+              marginBottom: '1rem',
             }}>
               Étudiant en ingénierie, ayant suivi les enseignements des Classes Préparatoires aux Grandes Écoles avec une spécialité en Mathématiques et en Physique, j'exerce en parallèle de mes études une activité professionnelle de programmation de sites et applications et solution IA pour différentes entreprises.
             </p>
+
+            {/* Terminal Hint */}
+            {showTerminal && (
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                style={{
+                  background: 'rgba(0, 0, 0, 0.6)',
+                  border: '1px solid rgba(102, 126, 234, 0.2)',
+                  borderRadius: '8px',
+                  padding: '0.75rem',
+                  marginBottom: '1.5rem',
+                  fontFamily: 'Consolas, Monaco, "Courier New", monospace',
+                  fontSize: '0.8rem',
+                  color: '#00ff00',
+                  backdropFilter: 'blur(5px)',
+                }}
+              >
+                <div style={{ color: '#00ff00' }}>
+                  {terminalText}
+                  <motion.span
+                    animate={{ opacity: [1, 0, 1] }}
+                    transition={{ duration: 0.8, repeat: Infinity }}
+                    style={{ color: '#00ff00' }}
+                  >
+                    |
+                  </motion.span>
+                </div>
+                <div style={{ color: '#ffffff', marginTop: '0.5rem' }}>
+                  → Adam Sirri - Data & Software Engineer
+                </div>
+              </motion.div>
+            )}
             
             <div style={{ marginBottom: '2rem' }}>
               <h4 style={{
