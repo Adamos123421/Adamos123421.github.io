@@ -38,7 +38,7 @@ const Projects = () => {
       stack: ['Node.js', 'Express', 'React.js', 'OpenAI Embeddings', 'Pinecone', 'Google Cloud VM', 'Cloudflare Tunnel', 'CI/CD'],
       features: ['Indexation en temps réel', 'Multi-langues', 'Réponses avec citations', 'Service cloud 24/7 sécurisé'],
       links: [
-        { name: 'Demo', url: 'https://creatures-certification-temperature-showing.trycloudflare.com/fr-FR/account/login?return_to=%2Ffr-FR%2Fapp%2Fsearch%2Fdashboards', icon: <Globe size={16} /> },
+        { name: 'Live Demo', url: 'https://counseling-italy-basket-clothes.trycloudflare.com/', icon: <Globe size={16} /> },
         { name: 'GitHub', url: 'https://github.com/Adamos123421/ragBOT-service', icon: <Github size={16} /> },
         { name: 'LinkedIn', url: 'https://www.linkedin.com/posts/adam-sirri-5b848a348_live-rag-bot-demo-github-repohttpslnkdin-activity-7364327322465767424-8PFB?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFbsftwBmBj3h10kvCxZnEDBsqVNmkoAFfQ', icon: <ExternalLink size={16} /> }
       ],
@@ -65,7 +65,7 @@ const Projects = () => {
       stack: ['Asterisk', 'Google Cloud', 'SIP/RTP', 'Firewall GCP', 'NAT traversal'],
       features: ['Service VoIP complet', 'Gestion SIP/RTP', 'Firewall GCP', 'Tests multiplateformes'],
       links: [
-        { name: 'Demo', url: '#', icon: <Globe size={16} /> }
+        { name: 'LinkedIn Demo', url: 'https://www.linkedin.com/posts/adam-sirri-5b848a348_voip-asterisk-sip-activity-7364442370714624000-9kxv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFbsftwBmBj3h10kvCxZnEDBsqVNmkoAFfQ', icon: <ExternalLink size={16} /> }
       ],
       icon: <Phone size={24} />,
       color: '#f093fb',
@@ -355,6 +355,8 @@ const Projects = () => {
                       <motion.a
                         key={linkIndex}
                         href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         style={{
