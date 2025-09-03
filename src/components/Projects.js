@@ -34,9 +34,9 @@ const Projects = () => {
   const projectsData = [
     {
       title: 'Live RAG Bot',
-      description: 'Assistant documentaire IA capable de répondre à des questions directement depuis Google Drive, combinant recherche sémantique et génération GPT-3.5-turbo.',
+      description: 'AI documentary assistant capable of answering questions directly from Google Drive, combining semantic search and GPT-3.5-turbo generation.',
       stack: ['Node.js', 'Express', 'React.js', 'OpenAI Embeddings', 'Pinecone', 'Google Cloud VM', 'Cloudflare Tunnel', 'CI/CD'],
-      features: ['Indexation en temps réel', 'Multi-langues', 'Réponses avec citations', 'Service cloud 24/7 sécurisé'],
+      features: ['Real-time indexing', 'Multi-language', 'Responses with citations', 'Secure 24/7 cloud service'],
       links: [
         { name: 'Live Demo', url: 'https://counseling-italy-basket-clothes.trycloudflare.com/', icon: <Globe size={16} /> },
         { name: 'GitHub', url: 'https://github.com/Adamos123421/ragBOT-service', icon: <Github size={16} /> },
@@ -48,9 +48,9 @@ const Projects = () => {
     },
     {
       title: 'Cybersecurity Lab',
-      description: 'Monitoring et détection d\'intrusions en temps réel sur VM Google Cloud avec Splunk Enterprise.',
-      stack: ['Splunk Enterprise', 'Splunk Universal Forwarder', 'Google Cloud', 'Dashboards interactifs', 'Alertes sécurité'],
-      features: ['Monitoring temps réel', 'Détection d\'intrusions', 'Dashboards interactifs', 'Système d\'alertes'],
+      description: 'Real-time monitoring and intrusion detection on Google Cloud VM with Splunk Enterprise.',
+      stack: ['Splunk Enterprise', 'Splunk Universal Forwarder', 'Google Cloud', 'Interactive Dashboards', 'Security Alerts'],
+      features: ['Real-time monitoring', 'Intrusion detection', 'Interactive dashboards', 'Alert system'],
       links: [
         { name: 'Demo', url: 'https://creatures-certification-temperature-showing.trycloudflare.com/fr-FR/account/login?return_to=%2Ffr-FR%2F', icon: <Globe size={16} /> },
         { name: 'LinkedIn', url: 'https://www.linkedin.com/posts/adam-sirri-5b848a348_projet-siem-avec-splunk-my-new-cybersecurity-activity-7364406026827161600-ZZVe?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFbsftwBmBj3h10kvCxZnEDBsqVNmkoAFfQ', icon: <ExternalLink size={16} /> }
@@ -61,9 +61,9 @@ const Projects = () => {
     },
     {
       title: 'VoIP Service',
-      description: 'Déploiement complet d\'un service VoIP avec gestion SIP/RTP, firewall GCP, NAT traversal et tests clients multiplateformes.',
-      stack: ['Asterisk', 'Google Cloud', 'SIP/RTP', 'Firewall GCP', 'NAT traversal'],
-      features: ['Service VoIP complet', 'Gestion SIP/RTP', 'Firewall GCP', 'Tests multiplateformes'],
+      description: 'Complete deployment of a VoIP service with SIP/RTP management, GCP firewall, NAT traversal and cross-platform client testing.',
+      stack: ['Asterisk', 'Google Cloud', 'SIP/RTP', 'GCP Firewall', 'NAT traversal'],
+      features: ['Complete VoIP service', 'SIP/RTP management', 'GCP Firewall', 'Cross-platform testing'],
       links: [
         { name: 'LinkedIn Demo', url: 'https://www.linkedin.com/posts/adam-sirri-5b848a348_voip-asterisk-sip-activity-7364442370714624000-9kxv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFbsftwBmBj3h10kvCxZnEDBsqVNmkoAFfQ', icon: <ExternalLink size={16} /> }
       ],
@@ -73,9 +73,9 @@ const Projects = () => {
     },
     {
       title: 'Computer Vision Projects',
-      description: 'Hand Sign Recognition et YOLOv4 Real-Time Object Detection avec optimisations GPU/CPU.',
+      description: 'Hand Sign Recognition and YOLOv4 Real-Time Object Detection with GPU/CPU optimizations.',
       stack: ['MediaPipe', 'OpenCV', 'Python', 'YOLOv4', 'GPU/CPU optimization'],
-      features: ['Détection de gestes', 'Alertes email', '25-30 FPS', '80+ classes'],
+      features: ['Gesture detection', 'Email alerts', '25-30 FPS', '80+ classes'],
       links: [
         { name: 'Hand Sign', url: 'https://www.linkedin.com/posts/adam-sirri-5b848a348_computervision-machinelearning-python-activity-7363695067422715904-sZCJ?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFbsftwBmBj3h10kvCxZnEDBsqVNmkoAFfQ', icon: <Eye size={16} /> },
         { name: 'Object Detection', url: 'https://www.linkedin.com/posts/adam-sirri-5b848a348_computervision-deeplearning-yolo-activity-7363657928857260034-8mZ5?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFbsftwBmBj3h10kvCxZnEDBsqVNmkoAFfQ', icon: <Eye size={16} /> },
@@ -279,7 +279,7 @@ const Projects = () => {
                       textTransform: 'uppercase',
                       letterSpacing: '0.5px',
                     }}>
-                      Fonctionnalités
+                      Features
                     </h4>
                     <div style={{ display: 'grid', gap: '0.4rem' }}>
                       {project.features.map((feature, featureIndex) => (

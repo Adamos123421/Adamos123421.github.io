@@ -147,7 +147,7 @@ const Hero = () => {
               lineHeight: 1.4,
             }}
           >
-            Ingénieur en Data & Software Engineering
+            Data & Software Engineering Engineer
           </motion.h2>
 
                      <motion.p
@@ -162,8 +162,8 @@ const Hero = () => {
                lineHeight: 1.6,
              }}
            >
-             Spécialisé en Intelligence Artificielle, Machine Learning, Développement Full-Stack, Cybersécurité et VoIP.
-             Passionné par l'innovation technologique et la résolution de problèmes complexes.
+             Specialized in Artificial Intelligence, Machine Learning, Full-Stack Development, Cybersecurity and VoIP.
+             Passionate about technological innovation and solving complex problems.
            </motion.p>
 
            {/* Terminal Effect */}
@@ -238,7 +238,7 @@ const Hero = () => {
               }}
             >
               <Mail size={20} />
-              Me Contacter
+              Contact Me
             </motion.button>
 
                          <motion.button
@@ -261,7 +261,7 @@ const Hero = () => {
                }}
              >
                <Download size={20} />
-               Télécharger CV
+               Download CV
              </motion.button>
           </motion.div>
         </motion.div>

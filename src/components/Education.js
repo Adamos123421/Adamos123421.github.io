@@ -12,41 +12,41 @@ const Education = () => {
   const educationData = [
     {
       institution: 'Institut National de Statistiques et Économie Appliquée',
-      degree: 'Deuxième Année en Cycle d\'Ingénierie',
+      degree: 'Second Year in Engineering Cycle',
       period: '2024-2025',
-      description: 'Filière Data and Software Engineering',
+      description: 'Data and Software Engineering Track',
       icon: <GraduationCap size={24} />,
       color: '#667eea'
     },
     {
       institution: 'Institut National de Statistiques et Économie Appliquée',
-      degree: 'Première Année en Cycle d\'Ingénierie',
+      degree: 'First Year in Engineering Cycle',
       period: '2023-2024',
-      description: 'Filière Data and Software Engineering',
+      description: 'Data and Software Engineering Track',
       icon: <GraduationCap size={24} />,
       color: '#764ba2'
     },
     {
       institution: 'Lycée Moulay Youssef',
-      degree: 'Deuxième Année de CPGE',
+      degree: 'Second Year of CPGE',
       period: '2022-2023',
-      description: 'Spécialité Mathématiques - Physique',
+      description: 'Mathematics - Physics Specialization',
       icon: <Award size={24} />,
       color: '#f093fb'
     },
     {
       institution: 'Lycée Moulay Youssef',
-      degree: 'Première Année de CPGE',
+      degree: 'First Year of CPGE',
       period: '2021-2022',
-      description: 'Mathématiques, Physique-Chimie, Sciences-Ingénierie, Philosophie',
+      description: 'Mathematics, Physics-Chemistry, Engineering Sciences, Philosophy',
       icon: <Award size={24} />,
       color: '#667eea'
     },
     {
       institution: 'Lycée Al-Qods',
-      degree: 'Baccalauréat Général Sciences-Mathématiques',
+      degree: 'General Baccalaureate in Mathematics-Sciences',
       period: '2021',
-      description: 'Mention Très Bien',
+      description: 'Very Good Mention',
       icon: <Award size={24} />,
       color: '#764ba2'
     }
@@ -84,7 +84,7 @@ const Education = () => {
               WebkitTextFillColor: 'transparent',
             }}
           >
-            Formation
+            Education
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}

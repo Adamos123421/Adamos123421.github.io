@@ -63,7 +63,7 @@ const About = () => {
               WebkitTextFillColor: 'transparent',
             }}
           >
-            À Propos
+            About
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -97,7 +97,7 @@ const About = () => {
               color: '#ffffff',
               marginBottom: '1.5rem',
             }}>
-              Profil Personnel
+              Personal Profile
             </h3>
             <p style={{
               fontSize: 'clamp(1rem, 3vw, 1.1rem)',
@@ -105,7 +105,7 @@ const About = () => {
               lineHeight: 1.7,
               marginBottom: '1rem',
             }}>
-              Étudiant en ingénierie, ayant suivi les enseignements des Classes Préparatoires aux Grandes Écoles avec une spécialité en Mathématiques et en Physique, j'exerce en parallèle de mes études une activité professionnelle de programmation de sites et applications et solution IA pour différentes entreprises.
+              Engineering student, having followed the teachings of Preparatory Classes for Grandes Écoles with a specialization in Mathematics and Physics, I practice in parallel to my studies a professional activity of programming websites and applications and AI solutions for different companies.
             </p>
 
             {/* Terminal Hint */}
@@ -149,7 +149,7 @@ const About = () => {
                 color: '#ffffff',
                 marginBottom: '1rem',
               }}>
-                Spécialisations
+                Specializations
               </h4>
               <div style={{ display: 'grid', gap: '0.5rem' }}>
                 {['Data and Software Engineering', 'Machine Learning & AI', 'Cybersecurity', 'VoIP & Telecommunications', 'Cloud Infrastructure', 'Computer Vision'].map((spec, index) => (
@@ -192,7 +192,7 @@ const About = () => {
               color: '#ffffff',
               marginBottom: '1.5rem',
             }}>
-              Coordonnées
+              Contact Information
             </h3>
             
             <div style={{ display: 'grid', gap: '1rem', marginBottom: '2rem' }}>
@@ -347,13 +347,13 @@ const About = () => {
                 color: '#ffffff',
                 marginBottom: '1rem',
               }}>
-                Langues
+                Languages
               </h4>
               <div style={{ display: 'grid', gap: '1rem' }}>
                 {[
-                  { name: 'Français', level: 'Langue maternelle', percentage: 100 },
-                  { name: 'Arabe', level: 'Langue maternelle', percentage: 100 },
-                  { name: 'Anglais', level: 'C2', percentage: 95 }
+                  { name: 'French', level: 'Native language', percentage: 100 },
+                  { name: 'Arabic', level: 'Native language', percentage: 100 },
+                  { name: 'English', level: 'C2', percentage: 95 }
                 ].map((lang, index) => (
                   <motion.div
                     key={index}

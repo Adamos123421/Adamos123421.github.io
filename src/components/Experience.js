@@ -34,21 +34,21 @@ const Experience = () => {
   const experienceData = [
     {
       company: 'OwnLy.nz',
-      position: 'Développeur IA',
-      period: 'Printemps 2025',
-      description: 'Création d\'une intelligence artificielle pour assister les employés dans leurs tâches tout en répondant aux questions des clients.',
+      position: 'AI Developer',
+      period: 'Spring 2025',
+      description: 'Creation of an artificial intelligence to assist employees in their tasks while answering customer questions.',
       icon: <Building size={24} />,
       color: '#667eea',
-      skills: ['IA', 'Machine Learning', 'Développement']
+      skills: ['AI', 'Machine Learning', 'Development']
     },
     {
       company: 'TéléPerformance',
-      position: 'Service Client',
-      period: 'Été 2023',
-      description: 'Communication et service client.',
+      position: 'Customer Service',
+      period: 'Summer 2023',
+      description: 'Communication and customer service.',
       icon: <Users size={24} />,
       color: '#764ba2',
-      skills: ['Communication', 'Service Client']
+      skills: ['Communication', 'Customer Service']
     }
   ];
 
@@ -85,7 +85,7 @@ const Experience = () => {
               WebkitTextFillColor: 'transparent',
             }}
           >
-            Expérience Professionnelle
+            Professional Experience
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -301,16 +301,15 @@ const Experience = () => {
               gap: '0.5rem',
             }}>
               <Briefcase size={24} />
-              En Recherche d'Opportunités
+              Seeking Opportunities
             </h3>
             <p style={{
               fontSize: '1rem',
               color: '#a8b2d1',
               lineHeight: 1.6,
             }}>
-              Actuellement en formation d'ingénierie, je suis ouvert aux opportunités 
-              de stage et de collaboration dans les domaines de l'IA, du développement 
-              et de l'ingénierie logicielle.
+              Currently in engineering training, I am open to internship opportunities 
+              and collaboration in the fields of AI, development, and software engineering.
             </p>
           </div>
         </motion.div>

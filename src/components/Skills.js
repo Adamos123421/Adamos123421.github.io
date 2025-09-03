@@ -33,7 +33,7 @@ const Skills = () => {
 
   const skillCategories = [
     {
-      title: 'Langages de Programmation',
+      title: 'Programming Languages',
       icon: <Code size={24} />,
       color: '#667eea',
       skills: [
@@ -43,7 +43,7 @@ const Skills = () => {
       ]
     },
     {
-      title: 'Bases de Données',
+      title: 'Databases',
       icon: <Database size={24} />,
       color: '#764ba2',
       skills: [
@@ -53,7 +53,7 @@ const Skills = () => {
       ]
     },
     {
-      title: 'Frameworks & Outils',
+      title: 'Frameworks & Tools',
       icon: <Settings size={24} />,
       color: '#f093fb',
       skills: [
@@ -64,7 +64,7 @@ const Skills = () => {
       ]
     },
     {
-      title: 'Machine Learning & IA',
+      title: 'Machine Learning & AI',
       icon: <Brain size={24} />,
       color: '#4facfe',
       skills: [
@@ -86,29 +86,29 @@ const Skills = () => {
       ]
     },
     {
-      title: 'Cybersécurité & VoIP',
+      title: 'Cybersecurity & VoIP',
       icon: <Settings size={24} />,
       color: '#ff6b6b',
       skills: [
-        { name: 'Sécurité réseau', level: 80 },
+        { name: 'Network Security', level: 80 },
         { name: 'VoIP/SIP', level: 85 },
-        { name: 'Cryptographie', level: 75 },
+        { name: 'Cryptography', level: 75 },
         { name: 'Asterisk', level: 80 },
       ]
     }
   ];
 
   const transversalSkills = [
-    'Résolution de problèmes complexes',
-    'Travail en équipe',
-    'Communication efficace',
-    'Gestion de projet',
-    'Apprentissage rapide',
-    'Adaptabilité',
-    'Pensée analytique',
+    'Complex problem solving',
+    'Teamwork',
+    'Effective communication',
+    'Project management',
+    'Fast learning',
+    'Adaptability',
+    'Analytical thinking',
     'Innovation',
-    'Sécurité informatique',
-    'Analyse de vulnérabilités'
+    'Computer security',
+    'Vulnerability analysis'
   ];
 
   return (
@@ -143,7 +143,7 @@ const Skills = () => {
               WebkitTextFillColor: 'transparent',
             }}
           >
-            Compétences
+            Skills
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -321,7 +321,7 @@ const Skills = () => {
             textAlign: 'center',
             marginBottom: '2rem',
           }}>
-            Compétences Transversales
+            Transversal Skills
           </h3>
           
           <div style={{ 

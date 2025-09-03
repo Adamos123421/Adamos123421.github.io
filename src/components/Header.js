@@ -6,12 +6,12 @@ const Header = ({ currentSection, scrollToSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { id: 'home', label: 'Accueil' },
-    { id: 'about', label: 'À Propos' },
-    { id: 'education', label: 'Éducation' },
-    { id: 'experience', label: 'Expérience' },
-    { id: 'projects', label: 'Projets' },
-    { id: 'skills', label: 'Compétences' },
+    { id: 'home', label: 'Home' },
+    { id: 'about', label: 'About' },
+    { id: 'education', label: 'Education' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'skills', label: 'Skills' },
     { id: 'contact', label: 'Contact' }
   ];
 

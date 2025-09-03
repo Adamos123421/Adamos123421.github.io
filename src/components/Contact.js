@@ -173,7 +173,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div style={{ color: '#ffffff', fontWeight: 600, marginBottom: '0.25rem', fontSize: 'clamp(0.9rem, 2.5vw, 1rem)' }}>
-                    Téléphone
+                    Phone
                   </div>
                   <div style={{ color: '#a8b2d1', fontSize: 'clamp(0.85rem, 2.2vw, 0.95rem)' }}>
                     +212 6 82 41 12 70
@@ -257,7 +257,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div style={{ color: '#ffffff', fontWeight: 600, marginBottom: '0.25rem', fontSize: 'clamp(0.9rem, 2.5vw, 1rem)' }}>
-                    Adresse
+                    Address
                   </div>
                   <div style={{ color: '#a8b2d1', fontSize: 'clamp(0.85rem, 2.2vw, 0.95rem)' }}>
                     Résidence Bayti 3, Avenue Hssaine, 11100, Sala Jadida
@@ -275,7 +275,7 @@ const Contact = () => {
                 marginBottom: '1.5rem',
                 textAlign: 'center',
               }}>
-                Réseaux sociaux
+                Social Networks
               </h4>
               
               <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
